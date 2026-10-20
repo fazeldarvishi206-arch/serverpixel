@@ -1,0 +1,102 @@
+```html
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ServerPixel | Minecraft</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Tahoma, sans-serif;
+      background: #101810;
+      color: white;
+      text-align: center;
+    }
+    header {
+      padding: 20px;
+      background: #1c2d1c;
+      border-bottom: 3px solid #58b947;
+    }
+    header h2 { color: #76e45b; margin: 5px; }
+    .hero { padding: 65px 18px; }
+    .hero h1 {
+      font-size: clamp(32px, 8vw, 56px);
+      color: #7bed58;
+      text-shadow: 3px 3px #23451b;
+    }
+    .hero p { line-height: 2; color: #d2dfce; }
+    .grass { font-size: 64px; margin: 20px; }
+    .button {
+      display: inline-block;
+      background: #54b83f;
+      color: white;
+      padding: 15px 24px;
+      margin: 8px;
+      border: 2px solid #a1f18a;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .panel {
+      max-width: 500px;
+      margin: 10px auto 35px;
+      padding: 25px;
+      background: #1b291b;
+      border: 1px solid #416b38;
+      border-radius: 12px;
+    }
+    #ip {
+      direction: ltr;
+      font-size: 18px;
+      color: #7bed58;
+      overflow-wrap: anywhere;
+    }
+    footer { padding: 22px; color: #aab8a6; }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>⛏ ServerPixel</h2>
+    دنیای ماجراجویی تو از اینجا شروع می‌شه!
+  </header>
+
+  <main class="hero">
+    <div class="grass">🌳⛏️🌲</div>
+    <h1>SERVERPIXEL</h1>
+    <p>
+      به دنیای بلوکی ما خوش اومدی!<br>
+      آماده‌ای ماجراجویی خودت رو شروع کنی؟
+    </p>
+    <a class="button" href="#server">مشاهده اطلاعات سرور</a>
+  </main>
+
+  <section class="panel" id="server">
+    <h2>🎮 اطلاعات سرور</h2>
+    <p>آدرس سرور:</p>
+    <p id="ip">serverpixel.funserver.top</p>
+    <button class="button" onclick="copyIP()">📋 کپی آی‌پی سرور</button>
+    <p id="message"></p>
+  </section>
+
+  <footer>
+    ServerPixel © 2026 · ساخته‌شده برای عاشقان Minecraft
+  </footer>
+
+  <script>
+    function copyIP() {
+      const ip = "serverpixel.funserver.top";
+      navigator.clipboard.writeText(ip).then(() => {
+        document.getElementById("message").textContent =
+          "✅ آی‌پی کپی شد!";
+      }).catch(() => {
+        document.getElementById("message").textContent =
+          "آی‌پی را دستی کپی کن: " + ip;
+      });
+    }
+  </script>
+</body>
+</html>
+```
